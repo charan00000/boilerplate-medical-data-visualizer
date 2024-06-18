@@ -18,11 +18,9 @@ def draw_cat_plot():
     # 5
     df_cat = df.melt(value_vars=['cholesterol', 'gluc', 'smoke', 'alco', 
                                  'active', 'overweight'], id_vars=['cardio'])
-    #print(df_cat)
     # 6
     df_cat['count'] = 1
     df_cat = df_cat.groupby(by = ['variable', 'cardio', 'value'], as_index = False).count()
-    #df_grouped['cardio' == 1, 'opposite'] = num_cardio - df_grouped['value']
 
     # 7
 
